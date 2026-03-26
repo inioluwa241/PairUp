@@ -47,13 +47,19 @@ const HistoryCard = function ({
                   </Text>
                 </View>
 
-                <Text style={styles.matchedPairTxt}>{each[0]}</Text>
+                <Text style={styles.matchedPairTxt}>
+                  {" "}
+                  {each[0].length > 6 ? each[0].slice(0, 5) + "..." : each[0]}
+                </Text>
               </View>
 
               <Ionicons name="heart-outline" size={25} color="#e57db1" />
 
               <View style={{ ...styles.names, justifyContent: "flex-end" }}>
-                <Text style={styles.matchedPairTxt}>{each[1]}</Text>
+                <Text style={styles.matchedPairTxt}>
+                  {" "}
+                  {each[1].length > 6 ? each[1].slice(0, 5) + "..." : each[1]}
+                </Text>
                 <View
                   style={{
                     ...styles.circle,

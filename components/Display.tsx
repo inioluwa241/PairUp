@@ -119,7 +119,12 @@ const Display = function () {
                           </Text>
                         </View>
 
-                        <Text style={styles.matchedPairTxt}>{each[0]}</Text>
+                        <Text style={styles.matchedPairTxt}>
+                          {" "}
+                          {each[0].length > 5
+                            ? each[0].slice(0, 5) + "..."
+                            : each[0]}
+                        </Text>
                       </View>
                       <View style={styles.iconCircle}>
                         <Ionicons
@@ -130,7 +135,11 @@ const Display = function () {
                       </View>
 
                       <View style={styles.names}>
-                        <Text style={styles.matchedPairTxt}>{each[1]}</Text>
+                        <Text style={styles.matchedPairTxt}>
+                          {each[1].length > 5
+                            ? each[1].slice(0, 5) + "..."
+                            : each[1]}
+                        </Text>
                         <View
                           style={{
                             ...styles.circle,

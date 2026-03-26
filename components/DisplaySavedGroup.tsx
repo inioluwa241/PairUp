@@ -54,7 +54,7 @@ const DisplaySavedGroup = function ({ group }: { group: Group }) {
       <View style={styles.itemsList}>
         {group.items.slice(0, 5).map((each, key) => (
           <View key={key} style={styles.item}>
-            <Text>{each}</Text>
+            <Text> {each.length > 6 ? each.slice(0, 5) + "..." : each}</Text>
           </View>
         ))}
         {group.items.length > 5 && <Text>+{group.items.length - 5} more</Text>}
