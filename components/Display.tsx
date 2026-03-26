@@ -112,7 +112,13 @@ const Display = function () {
                 <View style={styles.pairList}>
                   {namePairs.map((each, index) => (
                     <View key={index} style={styles.matchedPair}>
-                      <View style={styles.names}>
+                      <View
+                        style={{
+                          ...styles.names,
+                          justifyContent: "flex-start",
+                          flex: 1,
+                        }}
+                      >
                         <View style={styles.circle}>
                           <Text style={styles.leftText}>
                             {each[0]?.charAt(0).toUpperCase()}
@@ -134,7 +140,13 @@ const Display = function () {
                         />
                       </View>
 
-                      <View style={styles.names}>
+                      <View
+                        style={{
+                          ...styles.names,
+                          justifyContent: "flex-end",
+                          flex: 1,
+                        }}
+                      >
                         <Text style={styles.matchedPairTxt}>
                           {each[1].length > 5
                             ? each[1].slice(0, 5) + "..."
@@ -316,6 +328,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 10,
+    flex: 1,
   },
   circle: {
     height: 40,
