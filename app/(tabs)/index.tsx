@@ -1,11 +1,10 @@
 import AddPeopleCard from "@/components/AddPeopleCard";
 import Display from "@/components/Display";
 import { lightTheme } from "@/theme";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ScrollView, StyleSheet, View } from "react-native";
 
 export default function Index() {
-  AsyncStorage.clear();
+  // AsyncStorage.clear();
 
   return (
     <ScrollView

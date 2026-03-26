@@ -51,6 +51,12 @@
         "projectId": "a82bc74d-bd4e-4184-a6b6-43318c0ed6ec"
       }
     },
-    "owner": "luggard"
+    "owner": "luggard",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/a82bc74d-bd4e-4184-a6b6-43318c0ed6ec"
+    }
   }
 }
